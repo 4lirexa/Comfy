@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Comfy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Container -->
+    <div class="container">
+        <!-- navbar -->
+        <nav class="navbar">
+            <!-- Nav Links -->
+            <div class="nav_link_container">
+                <ul class="nav_links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="./about.html">About</a></li>
+                </ul>
+                <i class="toggle_btn fas fa-bars"></i>
+            </div>
+            <!-- Logo -->
+            <div class="logo">
+                <img src="./logo-white.svg" alt="" class="logo_image">
+            </div>
+            <!-- Shopping Cart -->
+            <div class="cart">
+                <i class="fas fa-shopping-cart"><span class="prod_num">0</span></i>
+            </div>
+        </nav>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header_content">
+                <p class="header_title">Rest, Relax, Unwind</p>
+                <p class="header_desc">Embrace your choices - we do</p>
+                <span class="shopnow"><a href="./products.html">Shop now</a></span>
+            </div>
+        </header>
+
+        <!-- Products -->
+        <main class="products_container">
+            <!-- Section -->
+            <div class="products_title">
+                <p>Featured</p>
+            </div>
+            <!-- Product -->
+            <div class="products">
+                
+            </div>
+
+            <div class="all_products_cont">
+                <p><a href="./products.html" class="all_products_btn">All products</a></p>
+            </div>
+        </main>
+
+        <!-- sidebar -->
+        <div class="cart_basket_cont">
+            <div class="overlay_basket">
+                <aside class="cart_basket">
+                    <p class="close"><i id="close_sidebar" class="fas fa-times"></i></p>
+                    <p class="basket_title">Your Bag</p>
+                    <div class="basket_items_container">
+                        <div class="added_item">
+                            <div class="item_image">
+                                <img src="https://dl.airtable.com/.attachmentThumbnails/d86e13eec1b200e2b21282b99a9382be/6d92321b" alt="">
+                            </div>
+                            <div class="item_details">
+                                <p class="item_title">High-Back Bench</p>
+                                <p class="item_price">$9.99</p>
+                                <span><a href="#" class="item_remove">remove</a></span>
+                            </div>
+                            <div class="quantity">
+                                <p class="item_q_inc"><i class="fas fa-chevron-up"></i></p>
+                                <p class="item_q">1</p>
+                                <p class="item_q_dec"><i class="fas fa-chevron-down"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="checkout_container">
+                        <div class="total_price">Total: <span>$238.85</span></div>
+                        <span><a href="#" class="checkout_btn">Checkout</a></span>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+
+        <!-- Responsive Nav -->
+        <div class="toggle_nav_cont">
+            <div class="overlay_nav">
+                <aside class="toggle_nav">
+                    <p class="close"><i id="close_nav" class="fas fa-times"></i></p>
+                    <ul class="nav_links_reponsive">
+                        <li>Home</li>
+                        <li>Products</li>
+                        <li>About</li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script type="module" src="./javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Comfy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .nav_links > li > a{
+            text-decoration: none;
+            color: #333;
+            transition: 0.5s;
+        }
+
+        .cart > i{
+            color: #333;
+        }
+
+        .header{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        .header_info{
+            margin-top: 80px;
+            width: 100%;
+            height: 200px;
+            background-color: rgb(235, 243, 247);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 5rem;
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: darkslategray;
+            text-transform: uppercase;
+        }
+        .header_products_contetn{
+            width: 100%;
+            max-width: 1268px;
+            margin-inline:auto ;
+            padding: 5rem 3rem;
+
+            display: flex;
+            gap: 2rem;
+
+        }
+        .products{
+            padding-top: 0;
+        }
+
+        .filters_container{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            position: sticky;
+            top: 20px;
+            align-self: flex-start;
+            height: auto;
+        }
+
+        #search{
+            padding: 0.5rem;
+            background-color: rgb(235, 243, 247);
+            border: none;
+        }
+
+        .filters_title,.price_range_title{
+            font-weight: bold;
+            padding-bottom: 0.5rem;
+        }
+
+        .filter{
+            padding-block: 0.15rem;
+            padding-left: 0.5rem;
+        }
+        
+
+        @media (max-width:750px){
+            
+            .header_products_contetn{
+                flex-direction: column;
+            }
+            .filters_container {
+                padding-inline: 2rem;
+                position: static;
+            }
+        }
+
+        @media (max-width:500px){
+            
+            .header_info{
+                font-size: 1.25rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container" style="padding-bottom: 0rem;">
+        <nav class="navbar">
+            <!-- Nav Links -->
+            <div class="nav_link_container">
+                <ul class="nav_links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="./about.html">About</a></li>
+                </ul>
+                <i class="toggle_btn fas fa-bars"></i>
+            </div>
+            <!-- Logo -->
+            <div class="logo">
+                <img src="./logo-black.svg" alt="" class="logo_image">
+            </div>
+            <!-- Shopping Cart -->
+            <div class="cart">
+                <i class="fas fa-shopping-cart"><span class="prod_num">0</span></i>
+            </div>
+        </nav>
+
+        <!-- Header -->
+        <header class="header" style="background-image:none;background-color:white;">
+            <div class="header_info">
+            </div>
+            <div class="header_products_contetn">
+                <aside class="filters_container">
+                    <input type="search" name="search" id="search" placeholder="Search...">
+                    <div class="filters">
+                        <p class="filters_title">
+                            Company
+                        </p>
+                        <p class="filter" id="all" style='font-weight:bold;'>All</p>
+                        <p class="filter" id="ikea">Ikea</p>
+                        <p class="filter" id="marcos">Macros</p>
+                        <p class="filter" id="caressa">Caressa</p>
+                        <p class="filter" id="liddy">Liddy</p>
+                    </div>
+                    <div class="price_range">
+                        <p class="price_range_title">
+                            Price
+                        </p>
+                        <input type="range" name="range" id="range" min="0" value="80" max="80">
+                        <div class="price_range_value">Value: $<span>80</span></div>
+                    </div>
+
+                </aside>
+                <div class="products">
+                    
+                </div>
+            </div>
+        </header>
+        
+        <!-- sidebar -->
+        <div class="cart_basket_cont">
+            <div class="overlay_basket">
+                <aside class="cart_basket">
+                    <p class="close"><i id="close_sidebar" class="fas fa-times"></i></p>
+                    <p class="basket_title">Your Bag</p>
+                    
+                    <div class="basket_items_container">
+                        <!-- <div class="added_item">
+                            <div class="item_image">
+                                <img src="https://dl.airtable.com/.attachmentThumbnails/d86e13eec1b200e2b21282b99a9382be/6d92321b" alt="">
+                            </div>
+                            <div class="item_details">
+                                <p class="item_title">High-Back Bench</p>
+                                <p class="item_price">$9.99</p>
+                                <span><a href="#" class="item_remove">remove</a></span>
+                            </div>
+                            <div class="quantity">
+                                <p class="item_q_inc"><i class="fas fa-chevron-up"></i></p>
+                                <p class="item_q">1</p>
+                                <p class="item_q_dec"><i class="fas fa-chevron-down"></i></p>
+                            </div>
+                        </div> -->
+                    </div>
+                    
+                    
+                    <div class="checkout_container">
+                        <div class="total_price">Total: <span>$238.85</span></div>
+                        <span><a href="#" class="checkout_btn">Checkout</a></span>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+
+        <!-- Responsive Nav -->
+        <div class="toggle_nav_cont">
+            <div class="overlay_nav">
+                <aside class="toggle_nav">
+                    <p class="close"><i id="close_nav" class="fas fa-times"></i></p>
+                    <ul class="nav_links_reponsive">
+                        <li>Home</li>
+                        <li>Products</li>
+                        <li>About</li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+
+        
+    </div>
+    <script type="module" src="./javascript.js"></script>
+</body>
+</html>

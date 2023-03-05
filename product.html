@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIGH-BACK BENCH | Comfy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .nav_links > li > a{
+            text-decoration: none;
+            color: #333;
+            transition: 0.5s;
+        }
+        .cart > i{
+            color: #333;
+        }
+
+        .header{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        .header_info{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 5rem;
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: darkslategray;
+            margin-top: 80px;
+            width: 100%;
+            height: 200px;
+            background-color: rgb(235, 243, 247);
+            text-transform: uppercase;
+        }
+        .header_about_contetn{
+            max-width: 1268px;
+            margin-inline: auto;
+            width: 100%;
+            padding: 5rem 3rem;
+
+            display: flex;
+            gap: 2rem;
+        }
+
+        .pro_image{
+            width: 50%;
+            height: 400px;
+        }
+        .pro_image > img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .pro_detail{
+            width: 50%;
+
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .pro_detail > h1{
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .pro_detail > .comp{
+            font-family: 'Kaushan Script', cursive;
+            color: gray;
+            text-transform: uppercase;
+        }
+        .pro_detail > .pro_price{
+            font-weight: bold;
+            font-size: 1.15rem;
+        }
+
+        .colors{
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .color{
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: black;
+        }
+        .pro_text{
+            text-align: justify;
+            line-height: 24px;
+        }
+
+        .add_to_cart_cont{
+            padding-top: 1rem;
+        }
+        .add_to_cart{
+            padding: 0.5rem;
+            background-color: orange;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        @media (max-width:990px){
+            .header_about_contetn{
+                flex-direction: column;
+            }
+            .pro_image{
+                width: 100%;
+            }
+            .pro_detail{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="padding-bottom: 0rem;">
+        <nav class="navbar">
+            <!-- Nav Links -->
+            <div class="nav_link_container">
+                <ul class="nav_links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="./about.html">About</a></li>
+                </ul>
+                <i class="toggle_btn fas fa-bars"></i>
+            </div>
+            <!-- Logo -->
+            <div class="logo">
+                <img src="./logo-black.svg" alt="" class="logo_image">
+            </div>
+            <!-- Shopping Cart -->
+            <div class="cart">
+                <i class="fas fa-shopping-cart"><span class="prod_num">0</span></i>
+            </div>
+        </nav>
+
+        <!-- Header -->
+        <header class="header" style="background-image:none;background-color:white;">
+            <div class="header_info">
+            </div>
+            <div class="header_about_contetn">
+                <!-- <div class="pro_image">
+                    <img src="https://dl.airtable.com/.attachmentThumbnails/d86e13eec1b200e2b21282b99a9382be/6d92321b" alt="">
+                </div>
+                <div class="pro_detail">
+                    <h1>High-Back Bench</h1>
+                    <p class="comp">BY IKEA</p>
+                    <div class="pro_price">
+                        $9.99
+                    </div>
+                    <div class="colors">
+                        <span class="color1"></span>
+                        <span class="color2"></span>
+                    </div>
+                    <p class="pro_text">
+                        Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge
+                    </p>
+                    <span class="add_to_cart_cont"><a href="" class="add_to_cart">add to cart</a></span>
+                </div> -->
+            </div>
+        </header>
+
+        <!-- sidebar -->
+        <div class="cart_basket_cont">
+            <div class="overlay_basket">
+                <aside class="cart_basket">
+                    <p class="close"><i id="close_sidebar" class="fas fa-times"></i></p>
+                    <p class="basket_title">Your Bag</p>
+                    <div class="basket_items_container">
+                        <div class="added_item">
+                            <div class="item_image">
+                                <img src="https://dl.airtable.com/.attachmentThumbnails/d86e13eec1b200e2b21282b99a9382be/6d92321b" alt="">
+                            </div>
+                            <div class="item_details">
+                                <p class="item_title">High-Back Bench</p>
+                                <p class="item_price">$9.99</p>
+                                <span><a href="#" class="item_remove">remove</a></span>
+                            </div>
+                            <div class="quantity">
+                                <p class="item_q_inc"><i class="fas fa-chevron-up"></i></p>
+                                <p class="item_q">1</p>
+                                <p class="item_q_dec"><i class="fas fa-chevron-down"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="checkout_container">
+                        <div class="total_price">Total: <span>$238.85</span></div>
+                        <span><a href="#" class="checkout_btn">Checkout</a></span>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+
+        <!-- Responsive Nav -->
+        <div class="toggle_nav_cont">
+            <div class="overlay_nav">
+                <aside class="toggle_nav">
+                    <p class="close"><i id="close_nav" class="fas fa-times"></i></p>
+                    <ul class="nav_links_reponsive">
+                        <li>Home</li>
+                        <li>Products</li>
+                        <li>About</li>
+                    </ul>
+                </aside>
+            </div>
+        </div>
+
+
+        <script type="module" src="./javascript.js"></script>
+    </div>
+</body>
+</html>
